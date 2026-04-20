@@ -33,6 +33,11 @@ public class UserController {
         return "user deleted succesfully";
     }
 
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable String id) {
+        return userService.getUserById(id);
+    }
+
 
 
 }
