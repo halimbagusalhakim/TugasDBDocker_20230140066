@@ -38,6 +38,12 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    @PutMapping("/{id}")
+    public String updateUser(@PathVariable String id, @RequestBody User request) {
+        userService.updateUser(id, request);
+        return "User updated succesfully";
+    }
+
 
 
 }
